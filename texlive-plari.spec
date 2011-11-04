@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/plari
+# catalog-date 2007-02-26 21:26:45 +0100
+# catalog-license gpl
+# catalog-version undef
 Name:		texlive-plari
 Version:	20070226
 Release:	1
@@ -47,6 +53,7 @@ indented.
 %doc %{_texmfdistdir}/source/latex/plari/Makefile
 %doc %{_texmfdistdir}/source/latex/plari/plari.dtx
 %doc %{_texmfdistdir}/source/latex/plari/plari.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -57,3 +64,5 @@ indented.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
