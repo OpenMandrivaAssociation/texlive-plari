@@ -5,8 +5,8 @@
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-plari
-Version:	20070226
-Release:	10
+Version:	20170414
+Release:	1
 Summary:	Typesetting stageplay scripts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/plari
