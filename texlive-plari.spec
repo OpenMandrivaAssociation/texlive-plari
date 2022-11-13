@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/plari
-# catalog-date 2007-02-26 21:26:45 +0100
-# catalog-license gpl
-# catalog-version undef
 Name:		texlive-plari
-Version:	20190228
+Version:	15878
 Release:	1
 Summary:	Typesetting stageplay scripts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/plari
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/plari.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/plari.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/plari.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/plari.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/plari.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/plari.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ headings, and with paragraphs vertically separated rather than
 indented.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -46,24 +40,11 @@ indented.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20070226-2
-+ Revision: 754977
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20070226-1
-+ Revision: 719273
-- texlive-plari
-- texlive-plari
-- texlive-plari
-- texlive-plari
-
