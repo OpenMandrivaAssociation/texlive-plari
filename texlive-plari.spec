@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Typesetting stageplay scripts
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/plari
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/plari
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/plari.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/plari.doc.r%{version}.tar.xz
